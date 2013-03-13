@@ -1,25 +1,27 @@
 <!--引数-->
-@(results: List[Calculate], calcForm: Form[Calculate])
+@(results: List[], func:List[] , calcForm: Form[Calculate])
 
 @import helper._
 
 @main("Calculator") {
 
 <h2>逆ポーランド記法の数式を入力してください</h2>
-<!-- フォーム-->
-@form(routes.Application.computation()) {
 
+@form(routes.Application.calc()) {
+<!-- フォーム-->
+@inputText(calcForm("式"))
 <!--計算ボタン-->
 <input type="submit" value="計算">
     }
 
 
-<!--計算履歴-->
+    
+<h2>計算履歴<h2>
 
     <table border="1">
-        <tr><th>式</th><th>答え</th></tr>
+        <tr><th>　<th><th>式</th><th>答え</th></tr>
         @for(results <- 10){
-        <tr><td><!--式--></td><td><!--計算結果--></td></tr>
+        <tr><td>results.size()<td><td>func</td><td>results</td></tr>
         }
     </table>
 }

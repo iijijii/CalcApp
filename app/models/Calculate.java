@@ -9,22 +9,21 @@ import play.data.validation.Constraints.*;
 
 public class Calculate extends Model{
     
-    public static List<Calculate> all() {
+    public static List<Calculate> function() {
+        //式をいれとくリスト
         return new ArrayList<Calculate>();
-      //配列を作る
+      
+    }    
+       
+    public static String[] calculate(String input) {
+        //計算結果を返す
+        return //計算結果
     }
     
-    public static void calculate(Calculate calc) {
-        /*逆ポーランド記法電卓プログラムを引っ張ってくる
-        （フォームに入力されたものを入力として計算し、計算結果を返す。（計算できる場合）*/
+    public static List<> ans(){
+        //答えをいれとくリスト
+        return new ArrayList<>();
     }
-    public static void error(){
-        //計算できない場合    
-    }
-    
-    public static void create(Calculate calc) {
-        calc.save();
-        //履歴
-    }
-    
+
+       
 }
