@@ -3,11 +3,10 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Application.index()
+GET     /             controllers.Application.index()
 
-# 
-GET     /                           controllers.Application.first()
-POST    /                           controllers.Application.calc()
+# Calculate
+POST    /record           controllers.Application.calculate()
 
 
 # Map static resources from the /public folder to the /assets URL path

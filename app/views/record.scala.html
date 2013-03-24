@@ -1,4 +1,4 @@
-@(inputForm:Form[Calculate])
+@(inputForm:Form[Calculate],function :String ,answer :String)
 
 @import helper._
 
@@ -9,5 +9,10 @@
      @form(routes.Application.calculate()) {       
         @inputText(inputForm("function"))         
         <input type="submit" value="計算">        
-}    
+}
+<!-- 答え -->
+@function = @answer
+
+<!-- 履歴 -->
+     
 }
