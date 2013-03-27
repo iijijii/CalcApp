@@ -1,15 +1,16 @@
-@(inputForm:Form[Calculate],answer :String ,functions :String)
-
+@(inputForm:Form[Calculate],message:String,func:String)
 @import helper._
 
-@main("Calculator") {
+@main("Error") {
+
+<input type="text" value=@func  > 
+
+<h2>@message</h2>
 
 <h2>逆ポーランド記法の数式を入力してください</h2>
- 
-     @form(routes.Application.calculate()) {       
+
+ @form(routes.Application.calculate()) {       
         @inputText(inputForm("function"))         
         <input type="submit" value="計算">        
 }    
-@functions = @answer
-
 }
